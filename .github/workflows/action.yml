@@ -23,6 +23,7 @@ jobs:
          browser: chrome
     
     - name: Deploy 🚀
+      if: always()
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: reports 
