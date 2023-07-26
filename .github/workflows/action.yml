@@ -13,15 +13,14 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 18
-      uses: actions/setup-node@v3
+    - name: Checkout 🛎
+      uses: actions/checkout@v3
+  
+    - name: Run Cypress Test 🧪
+      uses: cypress-io/github-action@v5
       with:
-        node-version: 18
-        cache: 'npm'
-
-    - run: npm ci
-    - run: npm run test-ci
+         command: npm run test-ci
+         browser: chrome
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
