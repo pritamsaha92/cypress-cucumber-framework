@@ -16,6 +16,7 @@ module.exports = defineConfig({
       inlineAssets: true,
     },
   },
+  // retries : 2,
   video: false,
   e2e: {
     setupNodeEvents(on, config) {
